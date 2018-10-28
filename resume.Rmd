@@ -1,0 +1,53 @@
+---
+title: "Resume"
+---
+
+#Resume
+Jiawei Ye  
+email: jy2947@cumc.columbia.edu
+
+##Education
+*  2018.8 - Expected 2020.5: Columbia University, New York, USA              
+
+    + MS in Biostatistics (Theory and Methods track)   
+    + Relevant coursework: Data Science, Biostatistics Methods, Epidemiology, Statistical Inference (2019 Spring)
+  
+  
+*  2014.8 - 2018.6: Southeast University, Nanjing, China                             
+
+    + B.S. in Laboratory Medicine   
+    + Relevant coursework: Clinical Biochemistry, Clinical Immunology, Molecular Biology, Pharmacology  
+
+* 2017.9 - 2018.2: Uppsala University, Uppsala, Sweden                            
+
+    + Exchange student at Department of Cancer Pharmacology and Computational Medicine – Bachelor Thesis  
+
+
+##Research Experience                                               
+* Interactions between anti-cancer drugs and drugs commonly used for concomitant diseases and treatment of cancer related symptoms  
+  
+    + Went through FDA review documents for plasma concentrations  
+    + Manipulated data with Excel and VBA  
+    + Analyzed data using Wilcoxon rank-sum test  
+    + Created graphs with GraphPad Prism 7  
+    + Performed wet lab experiments  
+
+* 2017.6 – 2017.8 Project: PPAR-δ regulated autophagy in mantle cell lymphoma through PI3K/AKT       
+  
+    + Performed wet lab experiments including cell culture, Western Blot  
+    + Analyzed data sets using ANOVA  
+
+* 2015 - 2016: Project: ¬¬The study on the mechanism for 2-Methoxyestradiol-regulated macrophage-inflammatory reaction induced by IgG immune complex                                         
+    
+    + Performed wet lab experiments including PCR, DNA electrophoresis, plasmid transformation.   
+
+
+##Internship                                                        
+* 2017.6 - 2017.8, 2018.3 - 2018.6: Internship at Clinical Laboratory Department Zhongda Hospital, Nanjing, China  
+    
+    + Used linear regression model to do method-comparison of different analysis methods.  
+    + Analyzed patient’s samples. 
+
+##Professional skills                                                 
+* Programming: R  
+* Software: Excel, GraphPad Prism 7, LaTeX  

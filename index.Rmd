@@ -2,9 +2,11 @@
 title: "Holy cow!"
 ---
 
-### I have a webpage!
+### Welcome!
 
-And I can put all kinds of stuff on it!
+You've reached Jiawei Ye's personal website. 
+
+[Resume](resume.html)
 
 
 ### Add link
