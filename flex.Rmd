@@ -1,12 +1,16 @@
 ---
 title: "flex"
-output:  flexdashboard::flex_dashboard:
+output:
+  flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
 ---
 
-```{r}
+```{r setup, include = FALSE}
+library(tidyverse)
 library(flexdashboard)
+library(p8105.datasets)
+library(plotly)
 ```
 
 Column {data-width=650}
@@ -15,7 +19,17 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
-
+data(instacart)
+instacart %>% 
+  filter(aisle == "fresh vegetables") %>% 
+  select(order_id, product_name) %>% 
+  group_by(product_name) %>% 
+  summarise(n_order = n()) %>% 
+  arrange(desc(n_order)) %>% 
+  top_n(10) %>%  
+  plot_ly(x = ~fct_reorder(product_name, n_order), y = ~n_order, type = "bar") %>% 
+  layout(xaxis = list(title = "Item"), 
+         yaxis = list(title = "Count"))
 ```
 
 Column {data-width=350}
@@ -24,7 +38,16 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
-
+instacart %>%
+  select(order_id, order_hour_of_day) %>% 
+  distinct(order_id, .keep_all = TRUE) %>% 
+  group_by(order_hour_of_day) %>% 
+  summarize(n_per_hour = n()) %>% 
+  plot_ly(x = ~order_hour_of_day, y = ~n_per_hour, type = "scatter", mode = "lines") %>% 
+  layout(xaxis = list(title = "Time(hour)", 
+                      tickmode = "array", 
+                      tickvals = c(0, 4, 8, 12, 16, 20, 24)), 
+         yaxis = list(title = "Order count"))
 ```
 
 ### Chart C

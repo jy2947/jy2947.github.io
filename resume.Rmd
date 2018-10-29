@@ -2,7 +2,7 @@
 title: "Resume"
 ---
 
-#Resume
+
 Jiawei Ye  
 email: jy2947@cumc.columbia.edu
 
