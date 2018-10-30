@@ -1,12 +1,14 @@
 ---
-title: "Holy cow!"
+title: "Jiawei's page"
 ---
 
 ### Welcome!
 
 You've reached Jiawei Ye's personal website. 
 
-[Resume](resume.html)
+You can find my resume [here](resume.html)
+
+You can find some plots I made for `instacart` dataset [here](flex.html)
 
 
 ### Add link
