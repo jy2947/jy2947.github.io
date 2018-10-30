@@ -16,26 +16,28 @@ library(plotly)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Number of items per order on different days of week
 
 ```{r}
-data(instacart)
 instacart %>% 
-  filter(aisle == "fresh vegetables") %>% 
-  select(order_id, product_name) %>% 
-  group_by(product_name) %>% 
-  summarise(n_order = n()) %>% 
-  arrange(desc(n_order)) %>% 
-  top_n(10) %>%  
-  plot_ly(x = ~fct_reorder(product_name, n_order), y = ~n_order, type = "bar") %>% 
-  layout(xaxis = list(title = "Item"), 
-         yaxis = list(title = "Count"))
+  select(order_id, add_to_cart_order, order_dow) %>% 
+  filter(order_id < 80000) %>% 
+  group_by(order_id, order_dow) %>% 
+  summarise(n_item = n()) %>%
+  mutate(order_dow = recode(order_dow, `0` = "Sun", `1` = "Mon", 
+                            `2` = "Tue", `3` = "Wed", `4` = "Thu", 
+                            `5` = "Fri", `6` = "Sat")) %>% 
+  plot_ly(x = ~order_dow, y = ~n_item, type = "box", color = ~order_dow) %>% 
+  layout(xaxis = list(title = ""),
+         yaxis = list(title = "Number of items ordered"))
+
+
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Number of orders over time
 
 ```{r}
 instacart %>%
@@ -50,8 +52,14 @@ instacart %>%
          yaxis = list(title = "Order count"))
 ```
 
-### Chart C
+### Histogram for number of days since prior order
 
 ```{r}
-
+instacart %>% 
+  select(order_id, days_since_prior_order) %>% 
+  distinct(order_id, .keep_all = TRUE) %>% 
+  plot_ly(x = ~days_since_prior_order, type = "histogram") %>% 
+  layout(xaxis = list(title = "Number of days since prior order",
+                      tickvals = c(0, 7, 14, 21, 28, 30)))
+  
 ```
