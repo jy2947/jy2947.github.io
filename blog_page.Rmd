@@ -1,0 +1,28 @@
+---
+title: "Blog"
+author: "Jiawei Ye"
+date: "September 11, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Why I started this
+
+So the famous UseR [Yihui Xie](https://yihui.name/) said everyone start building a personal website. I thought yeah maybe I can/should. I doubt I will be doing anything interesting in terms of coding/statistics but it will force me to be familiar with the R stuff. Apart from the homeworks anyway. 
+
+If someone is reading this at all - I know we are classmates because how on earth would you find this website if we are not. I should try to build a comment section for this site (and embarrasse myself with 0 comment). 
+
+What I am thinking now is:
+
+* Well maybe get a comment section for this site
+
+* Build a table of content page so I can link and add blogs like [this page](https://yihui.name/en/). 
+
+Obviously I was not listening to Prof. Tsai this afternoon. I was browsing through Yihui's blogs, mainly his report and seminar slides. He (and his team perhaps) built amazing R packages so I don't need to bother memorizing the latex codes at the beginning and the end of documents to write my homework. Bravo. And I've been noticing the consistency of slides formats from my classes - namely DS2, methods 2 and data mining (if I remember it correctly). Don't know if it's because of R packages or it's from some ios applications. 
+
+And I am curious how Yihui accomplished that - did the R package `tinyTex` added the latex codes for me so I don't have to memorize them?
+
+No R coding for today - hmm.
