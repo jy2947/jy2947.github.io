@@ -16,3 +16,7 @@ You can find some plots I made for `instacart` dataset [here](flex.html)
 [google](https://www.google.com)
 
 link to about page [about](about.html)
+
+### Start blogging
+
+9-11-2019  [Why I started this](blog_page.html)
