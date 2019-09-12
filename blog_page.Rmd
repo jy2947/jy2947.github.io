@@ -26,3 +26,14 @@ Obviously I was not listening to Prof. Tsai this afternoon. I was browsing throu
 And I am curious how Yihui accomplished that - did the R package `tinyTex` added the latex codes for me so I don't have to memorize them?
 
 No R coding for today - hmm.
+
+
+Update:
+
+[This](https://darekkay.com/blog/static-site-comments/) is a review I found on how to add comments to a blog.
+
+*  [Solution 1](https://github.com/imsun/gitment)
+
+*  [Solution 2](https://utteranc.es/)
+
+I am not sure if these will work in R, but since html website templates works in R I think this works too. 
