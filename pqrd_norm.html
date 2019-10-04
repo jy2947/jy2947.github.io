@@ -11,7 +11,7 @@
 
 
 
-<title>Jiawei’s page</title>
+<title>Notes for some basic R</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -312,26 +312,67 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Jiawei’s page</h1>
+<h1 class="title toc-ignore">Notes for some basic R</h1>
 
 </div>
 
 
-<div id="welcome" class="section level3">
-<h3>Welcome!</h3>
-<p>You’ve reached Jiawei Ye’s personal website.</p>
-<p>You can find my resume <a href="resume.html">here</a></p>
-<p>You can find some plots I made for <code>instacart</code> dataset <a href="flex.html">here</a></p>
+<div id="why-this-post" class="section level2">
+<h2>Why this post</h2>
+<p>I hate to say that I always forget which function to go for when calculating Z-values, probs, etc and the help documents in R seem vague. So here’s some notes for future reference.</p>
+<p>Take normal distribution for example.</p>
+<p>Four functions are: <code>rnorm()</code>, <code>pnorm()</code>, <code>qnorm</code>, <code>dnorm()</code>.</p>
+<div id="rnorm-for-generating-random-numbers" class="section level3">
+<h3><code>rnorm</code> for generating random numbers</h3>
+<p>If I want a random vector with 10 numbers, mean 5, standard deviation 3.</p>
+<pre class="r"><code>#set seed for reproducibility
+set.seed(123)
+x = rnorm(10, 5, 3)
+plot(x)</code></pre>
+<p><img src="pqrd_norm_files/figure-html/unnamed-chunk-1-1.png" width="480" /></p>
+<p>So the value of x seem to be centered around 5, have some variability and there’s 10 points.</p>
 </div>
-<div id="add-link" class="section level3">
-<h3>Add link</h3>
-<p><a href="https://www.google.com">google</a></p>
-<p>link to about page <a href="about.html">about</a></p>
+<div id="qnorm-for-getting-z-values" class="section level3">
+<h3><code>qnorm</code> for getting z-values</h3>
+<pre class="r"><code>qnorm(0.05)</code></pre>
+<pre><code>## [1] -1.644854</code></pre>
+<pre class="r"><code>qnorm(0.975)</code></pre>
+<pre><code>## [1] 1.959964</code></pre>
+<pre class="r"><code>qnorm(0.5)</code></pre>
+<pre><code>## [1] 0</code></pre>
+<pre class="r"><code>x = seq(0.001, 0.999, by = 0.01)
+y = qnorm(x)
+
+ggplot() +
+  geom_point(aes(x = x, y = y))</code></pre>
+<p><img src="pqrd_norm_files/figure-html/unnamed-chunk-2-1.png" width="480" /></p>
+<p>So <code>qnorm</code> is to find the z value at a given probability. By flipping the coordinates it becomes a cumulative densitify plot.</p>
 </div>
-<div id="start-blogging" class="section level3">
-<h3>Start blogging</h3>
-<p>9-11-2019 <a href="blog_page.html">Why I started this</a><br />
-10-4-2019 <a href="pqrd_norm.html">Notes for some basic R</a></p>
+<div id="pnorm---inverse-function-for-qnorm" class="section level3">
+<h3><code>pnorm</code> - “inverse” function for <code>qnorm</code></h3>
+<pre class="r"><code>pnorm(1.96)</code></pre>
+<pre><code>## [1] 0.9750021</code></pre>
+<pre class="r"><code>pnorm(1.64)</code></pre>
+<pre><code>## [1] 0.9494974</code></pre>
+<pre class="r"><code>pnorm(0)</code></pre>
+<pre><code>## [1] 0.5</code></pre>
+<pre class="r"><code>x = seq(-3,3, by = 0.1)
+y = pnorm(x)
+
+ggplot() +
+  geom_point(aes(x = x, y = y))</code></pre>
+<p><img src="pqrd_norm_files/figure-html/unnamed-chunk-3-1.png" width="480" /></p>
+<p>So you enter the z value and it gives you the probabilty corresponds to it.</p>
+</div>
+<div id="dnorm-gives-the-density" class="section level3">
+<h3><code>dnorm</code> gives the density</h3>
+<pre class="r"><code>x = seq(-5,5, by = 0.05)
+y = dnorm(x)
+ggplot() +
+  geom_point(aes(x=x, y = y))</code></pre>
+<p><img src="pqrd_norm_files/figure-html/unnamed-chunk-4-1.png" width="480" /></p>
+<p>So dnorm gives the probability density function.</p>
+</div>
 </div>
 
 
