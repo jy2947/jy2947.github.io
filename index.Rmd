@@ -19,5 +19,3 @@ link to about page [about](about.html)
 
 ### Start blogging
 
-9-11-2019  [Why I started this](blog_page.html)  
-10-4-2019  [Notes for some basic R](pqrd_norm.html)  
